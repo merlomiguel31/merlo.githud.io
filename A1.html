@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Soluciones Digitales</title>
+</head>
+<body>
+    <header>
+        <h1>TechNova Solutions</h1>
+        <p>Impulsando tu negocio hacia el futuro digital.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#registro">Solicitar Demo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección de Presentación de Productos -->
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <article>
+                <h3>Desarrollo de Software a Medida</h3>
+                <p>Creamos aplicaciones robustas y escalables adaptadas a las necesidades específicas de tu empresa.</p>
+            </article>
+
+            <article>
+                <h3>Ciberseguridad Proactiva</h3>
+                <p>Protegemos tu infraestructura con los más altos estándares de seguridad y monitoreo 24/7.</p>
+            </article>
+        </section>
+
+        <!-- Sección de Formulario de Registro/Interés -->
+        <section id="registro">
+            <h2>Solicita una Consultoría Gratuita</h2>
+            <form action="/registro_cliente" method="post">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus apellidos" size="30" required>
+                
+                <br><br>
+
+                <label for="edad">Edad del representante:</label>
+                <input type="number" name="edad" id="edad" min="18" max="99">
+
+                <br><br>
+
+                <label for="clave">Código de cliente (opcional):</label>
+                <input type="password" name="contraseña" id="contraseña" size="10">
+
+                <br><br>
+                
+                <label for="fecha">Fecha preferida para reunión:</label>
+                <input type="date" name="fecha" id="fecha">
+
+                <br><br>
+
+                <p>Género del solicitante:</p>
+                <input type="radio" name="sexo" id="masculino" value="M">
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="femenino" value="F">
+                <label for="femenino">Femenino</label>
+
+                <br><br>
+
+                <p>Tipo de solución de interés:</p>
+                <input type="radio" name="solucion" id="nube" value="Cloud">
+                <label for="nube">Infraestructura Cloud</label>
+                <input type="radio" name="solucion" id="ia" value="IA">
+                <label for="ia">Inteligencia Artificial</label>
+
+                <br><br>
+
+                <p>Tecnologías que utiliza actualmente:</p>
+                <input type="checkbox" name="tech1" id="java" value="Java">
+                <label for="java">Java</label>
+                <input type="checkbox" name="tech2" id="python" value="Python">
+                <label for="python">Python</label>
+                <input type="checkbox" name="tech3" id="js" value="JS">
+                <label for="js">JavaScript</label>
+
+                <br><br>
+
+                <label for="distrito">Sede más cercana:</label>
+                <select name="distrito" id="distrito">
+                    <option value="1">Sede Ate</option>
+                    <option value="2">Sede Lurigancho</option>
+                    <option value="3">Sede La Molina</option>
+                </select>
+
+                <br><br>
+
+                <button type="submit">Enviar Solicitud</button>
+                <button type="reset">Limpiar Formulario</button>
+            </form>
+        </section>
+
+        <aside>
+            <h3>Testimonios</h3>
+            <p>"TechNova transformó nuestra forma de trabajar en menos de 6 meses." - <em>Empresa Local S.A.</em></p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechNova Solutions - Todos los derechos reservados.</p>
+        <p>Contacto: info@technova.com.pe</p>
+    </footer>
+</body>
+</html>
