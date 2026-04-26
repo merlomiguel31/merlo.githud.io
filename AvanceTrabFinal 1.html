@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions - Innovación Digital</title>
+</head>
+<body>
+    <header>
+        <!-- Logo de la empresa -->
+        <img src="assets/images/technova.png" alt="Logo TechNova" width="40">
+        <h1>TechNova Solutions</h1>
+        <p><i>"Transformando ideas en código de alto impacto"</i></p>
+        <hr>
+    </header>
+
+    <nav>
+        <table width="100%" border="0">
+            <tr>
+                <td><a href="#inicio">Inicio</a></td>
+                <td><a href="#servicios">Servicios</a></td>
+                <td><a href="#precios">Planes</a></td>
+                <td><a href="#registro">Contacto</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <article>
+                <h2>Bienvenidos a la Era Digital</h2>
+                <p>En TechNova ayudamos a las empresas a escalar mediante tecnología de punta.</p>
+                <!-- Imagen principal -->
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXF1aXBvJTIwdHJhYmFqYW5kb3xlbnwwfHwwfHx8MA%3D%3D" alt="Equipo trabajando" width="500">
+            </article>
+        </section>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios Principales</h2>
+            <table border="1" cellpadding="10">
+                <tr>
+                    <td>
+                        <img src="https://cdn-icons-png.flaticon.com/128/12372/12372075.png" alt="Icono Software" width="50">
+                        <h3>Desarrollo Web</h3>
+                        <p>Sitios modernos y adaptables.</p>
+                    </td>
+                    <td>
+                        <img src="https://cdn-icons-png.flaticon.com/128/4744/4744225.png" alt="Icono Seguridad" width="50">
+                        <h3>Ciberseguridad</h3>
+                        <p>Protección total de datos.</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="precios">
+            <h2>Tabla de Inversión</h2>
+            <table border="1" width="80%">
+                <thead>
+                    <tr bgcolor="#f2f2f2">
+                        <th>Nivel</th>
+                        <th>Descripción</th>
+                        <th>Inversión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Startup</b></td>
+                        <td>Web básica + Hosting</td>
+                        <td>$500</td>
+                    </tr>
+                    <tr>
+                        <td><b>Business</b></td>
+                        <td>Ecommerce + App Móvil</td>
+                        <td>$1500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="registro">
+            <h2>¿Listo para empezar? Regístrate</h2>
+            <form action="/enviar" method="post">
+                <fieldset>
+                    <legend>Datos del Proyecto</legend>
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" name="nombres" id="nombres" placeholder="Tus nombres" required>
+                    
+                    <br><br>
+
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos" placeholder="Tus apellidos" required>
+                    
+                    <br><br>                   
+
+                    <label>Tipo de Consultoría:</label><br>
+                    <input type="radio" name="tipo" id="remota" value="R"> <label for="remota">Remota</label>
+                    <input type="radio" name="tipo" id="presencial" value="P"> <label for="presencial">Presencial</label>
+                    
+                    <br><br>
+
+                    <label for="distrito">Sede de interés:</label>
+                    <select name="distrito" id="distrito">
+                        <option value="1">Ate</option>
+                        <option value="2">Lurigancho</option>
+                        <option value="3">La Molina</option>
+                    </select>
+
+                    <br><br>
+
+                    <button type="submit">Enviar Solicitud</button>
+                    <button type="reset">Borrar todo</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <aside>
+            <h3>Ubicación Global</h3>
+            <!-- Mapa simulado con una imagen o iframe -->
+            <img src="https://cdn-icons-png.flaticon.com/128/2335/2335353.png" alt="Mapa de ubicación">
+            <p>Visítanos en nuestras oficinas centrales.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Siguenos en redes sociales:</p>
+        <p>
+            <img src="https://cdn-icons-png.flaticon.com/128/15047/15047435.png" width="20"> Facebook | 
+            <img src="https://cdn-icons-png.flaticon.com/128/15707/15707749.png" width="20"> Instagram
+        </p>
+        <p>&copy; 2026 TechNova S.A.C.</p>
+    </footer>
+</body>
+</html>
+
