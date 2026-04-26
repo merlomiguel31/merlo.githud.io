@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova | Consultoría Tecnológica</title>
+</head>
+<body bgcolor="#F4F7F6" text="#333333"> <!-- Color de fondo suave y texto gris oscuro -->
+
+    <!-- CABECERA CON COLOR Y LOGO -->
+    <header>
+        <table width="100%" bgcolor="#2C3E50" cellpadding="20">
+            <tr>
+                <td align="center">
+                    <img src="assets\images\technova.png" alt="Logo TechNova" border="2" width="100">
+                    <h1 style="color: white; font-family: Arial;">TECHNOVA SOLUTIONS</h1>
+                    <p style="color: #BDC3C7;"><i>Expertos en Transformación Digital</i></p>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <!-- NAVEGACIÓN ESTILO BOTONES -->
+    <nav>
+        <table width="100%" border="1" cellpadding="10" cellspacing="0" bgcolor="#ECF0F1">
+            <tr align="center">
+                <td><a href="#quienes-somos">¿Quiénes Somos?</a></td>
+                <td><a href="#servicios">Nuestros Servicios</a></td>
+                <td><a href="#planes">Planes y Precios</a></td>
+                <td><a href="#contacto">Solicitar Info</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <br>
+        <!-- SECCIÓN INTRODUCTORIA CON IMAGEN LATERAL -->
+        <section id="quienes-somos">
+            <table width="90%" align="center" cellpadding="15">
+                <tr>
+                    <td width="50%">
+                        <h2>Impulsamos tu crecimiento</h2>
+                        <p>En <b>TechNova</b>, no solo instalamos software; diseñamos el futuro de tu empresa. Con más de 10 años en el mercado peruano, somos líderes en implementación de IA y ciberseguridad corporativa.</p>
+                    </td>
+                    <td width="50%" align="center">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2285/2285491.png" alt="Gráficos de crecimiento" width="100" border="1">
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr width="80%">
+
+        <!-- SECCIÓN DE SERVICIOS USANDO TABLAS PARA COLUMNAS -->
+        <section id="servicios">
+            <h2 align="center">Nuestras Soluciones</h2>
+            <table width="90%" align="center" border="0" cellpadding="10">
+                <tr align="center">
+                    <td>
+                        <img src="https://cdn-icons-png.flaticon.com/128/3715/3715170.png" width="80"><br>
+                        <h3>Desarrollo Cloud</h3>
+                        <p>Migramos tu oficina a la nube con total seguridad.</p>
+                    </td>
+                    <td>
+                        <img src="https://cdn-icons-png.flaticon.com/128/4744/4744225.png" width="80"><br>
+                        <h3>Ciberseguridad</h3>
+                        <p>Protección contra ataques y respaldo de datos críticos.</p>
+                    </td>
+                    <td>
+                        <img src="https://cdn-icons-png.flaticon.com/128/8439/8439120.png" width="80"><br>
+                        <h3>Analítica de Datos</h3>
+                        <p>Convertimos tus datos en decisiones inteligentes.</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <br>
+
+        <!-- TABLA DE PRECIOS PROFESIONAL -->
+        <section id="planes" bgcolor="#FFFFFF">
+            <h2 align="center">Inversión por Proyecto</h2>
+            <table border="1" width="70%" align="center" cellspacing="0" cellpadding="15">
+                <tr bgcolor="#2C3E50" style="color: white;">
+                    <th>Servicio</th>
+                    <th>Tiempo Estimado</th>
+                    <th>Costo Base</th>
+                </tr>
+                <tr>
+                    <td>Auditoría Digital</td>
+                    <td>1 Semana</td>
+                    <td align="right">S/ 1,200</td>
+                </tr>
+                <tr bgcolor="#EAEDED">
+                    <td>Implementación ERP</td>
+                    <td>3 Meses</td>
+                    <td align="right">S/ 8,500</td>
+                </tr>
+                <tr>
+                    <td>Soporte Anual 24/7</td>
+                    <td>Continuo</td>
+                    <td align="right">S/ 3,000</td>
+                </tr>
+            </table>
+        </section>
+
+        <br><hr width="80%"><br>
+
+        <!-- FORMULARIO DE CONTACTO MEJORADO -->
+        <section id="contacto">
+            <table width="60%" align="center" bgcolor="#ECF0F1" cellpadding="20" style="border: 1px dashed #7F8C8D;">
+                <tr>
+                    <td>
+                        <h2 align="center">Contáctanos hoy</h2>
+                        <form action="#" method="post">
+                            <label for="apellidos">Apellidos y Nombres:</label><br>
+                            <input type="text" id="apellidos" name="apellidos" style="width: 95%;" placeholder="Ej. Pérez García, Juan"><br><br>
+
+                            <label for="fecha">¿Cuándo desea la cita?:</label><br>
+                            <input type="date" id="fecha" name="fecha"><br><br>
+
+                            <label>Interés principal:</label><br>
+                            <input type="checkbox" id="c1" name="ia" value="si"> IA 
+                            <input type="checkbox" id="c2" name="cloud" value="si"> Cloud 
+                            <input type="checkbox" id="c3" name="web" value="si"> Web<br><br>
+
+                            <label for="distrito">Sede para visita:</label>
+                            <select id="distrito" name="distrito">
+                                <option>Ate (Principal)</option>
+                                <option>La Molina</option>
+                                <option>Lurigancho</option>
+                            </select><br><br>
+
+                            <div align="center">
+                                <button type="submit" style="padding: 10px 20px; background-color: #E74C3C; color: white; border: none;">ENVIAR INFORMACIÓN</button>
+                                <button type="reset" style="padding: 10px 20px;">LIMPIAR</button>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <br>
+
+    <!-- PIE DE PÁGINA -->
+    <footer bgcolor="#2C3E50" style="color: white; padding: 20px;">
+        <table width="100%">
+            <tr>
+                <td align="left">
+                    <small>&copy; 2026 TechNova Solutions - Lima, Perú</small>
+                </td>
+                <td align="right">
+                    <a href="#" style="color: white; text-decoration: none;">Facebook</a> | 
+                    <a href="#" style="color: white; text-decoration: none;">LinkedIn</a>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+</body>
+</html>
+
+
