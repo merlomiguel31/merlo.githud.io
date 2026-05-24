@@ -1,0 +1,574 @@
+/* ==========================================================================
+   1. RESET Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+}
+
+body {
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor General */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Espaciado entre secciones */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0f2027;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #00adb5;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   2. CABECERA (HEADER) Y NAVEGACIÓN
+   ========================================================================== */
+.sitio-header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.header-contenido .logo {
+    width: 80px;
+    margin: 0 auto 15px auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
+}
+
+.header-contenido h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.header-contenido .slogan {
+    font-size: 1.2rem;
+    color: #00adb5;
+    font-weight: 300;
+}
+
+/* Menú de Navegación */
+.menu-navegacion {
+    background-color: #111b21;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu-navegacion a {
+    color: #ffffff;
+    padding: 15px 25px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu-navegacion a:hover {
+    background-color: #00adb5;
+    color: #111b21;
+}
+
+/* ==========================================================================
+   3. SECCIÓN INTRODUCTORIA (GRID 2 COLUMNAS)
+   ========================================================================== */
+.seccion-introduccion {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.texto-intro h2 {
+    text-align: left;
+}
+.texto-intro h2::after {
+    margin: 10px 0 0 0;
+}
+
+.texto-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+.imagen-intro img {
+    width: 250px;
+    margin: 0 auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ==========================================================================
+   4. SECCIÓN DE SERVICIOS (GRID 3 COLUMNAS)
+   ========================================================================== */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-servicio {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #203a43;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-top-color: #00adb5;
+}
+
+.tarjeta-servicio img {
+    width: 60px;
+    margin: 0 auto 20px auto;
+}
+
+.tarjeta-servicio h3 {
+    margin-bottom: 15px;
+    color: #0f2027;
+}
+
+.tarjeta-servicio p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   5. NUEVA SECCIÓN: CASOS DE ÉXITO (GRID ASIMÉTRICO EN PANTALLAS GRANDES)
+   ========================================================================== */
+.grid-casos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.caso-tarjeta {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border-left: 4px solid #ced4da;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.caso-tarjeta h3 {
+    color: #0f2027;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.caso-tarjeta p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.caso-resultado {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #111b21;
+    text-transform: uppercase;
+    background-color: #eef2f3;
+    padding: 6px 12px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.caso-badge {
+    background-color: #00adb5;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   6. SECCIÓN DE BENEFICIOS (GRID ASIMÉTRICO 2x2 / RESPONSIVE)
+   ========================================================================== */
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 20px;
+}
+
+.item-beneficio {
+    background-color: #eef2f3;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    border-left: 5px solid #00adb5;
+}
+
+/* ==========================================================================
+   7. NUEVA SECCIÓN: EQUIPO DE ESPECIALISTAS (GRID SIMÉTRICO)
+   ========================================================================== */
+.grid-equipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.miembro-tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 35px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miembro-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.miembro-tarjeta img {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px auto;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.miembro-tarjeta h4 {
+    color: #0f2027;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.miembro-tarjeta .puesto {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.miembro-tarjeta .cert {
+    display: inline-block;
+    background-color: #e6fffa;
+    color: #00a389;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* ==========================================================================
+   8. CAJA DE GARANTÍA
+   ========================================================================== */
+.tarjeta-informativa {
+    background: linear-gradient(45deg, #e8f9f9, #ffffff);
+    border: 1px dashed #00adb5;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tarjeta-informativa h3 {
+    color: #0f2027;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* ==========================================================================
+   9. TABLA DE PRECIOS SEMÁNTICA
+   ========================================================================== */
+.tabla-contenedor {
+    overflow-x: auto;
+    margin: 0 auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.tabla-precios th, .tabla-precios td {
+    padding: 15px 20px;
+}
+
+.tabla-precios th {
+    background-color: #0f2027;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.tabla-precios tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tabla-precios tr:hover {
+    background-color: #f1f3f5;
+}
+
+.tabla-precios td.precio {
+    font-weight: bold;
+    color: #00adb5;
+}
+
+/* ==========================================================================
+   10. NUEVA SECCIÓN: PREGUNTAS FRECUENTES (GRID 2 COLUMNAS DE TEXTO)
+   ========================================================================== */
+.grid-faq {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px 40px;
+}
+
+.faq-item {
+    padding: 5px;
+}
+
+.faq-item h4 {
+    color: #0f2027;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-item h4::before {
+    content: "💡";
+    font-size: 1rem;
+}
+
+.faq-item p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   11. FORMULARIO DE CONTACTO (FLEXBOX)
+   ========================================================================== */
+.seccion-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contenedor-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-campo label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #203a43;
+}
+
+.grupo-campo input[type="text"],
+.grupo-campo input[type="date"],
+.grupo-campo select {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus {
+    outline: none;
+    border-color: #00adb5;
+}
+
+/* Checkboxes Zona */
+.zona-checkboxes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.zona-checkboxes label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Botones del Formulario */
+.botones-formulario {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.botones-formulario button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-enviar {
+    background-color: #00adb5;
+    color: #ffffff;
+}
+
+.btn-enviar:hover {
+    background-color: #049299;
+}
+
+.btn-limpiar {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.btn-limpiar:hover {
+    background-color: #dee2e6;
+}
+
+.botones-formulario button:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   12. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.sitio-footer {
+    background-color: #111b21;
+    color: #a0aec0;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footer-contenido .redes a {
+    color: #00adb5;
+    margin: 0 5px;
+}
+
+.footer-contenido .redes a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   13. MEDIA QUERIES (RESPONSIVE DESIGN ADAPTATIVO)
+   ========================================================================== */
+
+/* Pantallas medianas en adelante (Tablets y Computadoras) */
+@media (min-width: 768px) {
+    .seccion-introduccion {
+        grid-template-columns: 3fr 2fr;
+    }
+    
+    .footer-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Pantallas grandes (Diseño asimétrico para Casos de Éxito) */
+@media (min-width: 900px) {
+    .grid-casos {
+        grid-template-columns: 2fr 1fr;
+    }
+    .caso-tarjeta.destacado {
+        grid-row: span 2;
+        border-left-color: #00adb5;
+        background: linear-gradient(145deg, #ffffff, #f4fcfc);
+    }
+}
