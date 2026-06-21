@@ -1,0 +1,29 @@
+:root { font-family: system-ui, sans-serif; color: #102a43; background: #f4f7fb; } 
+* { box-sizing: border-box; } 
+body { margin: 0; } 
+.cabecera { display: flex; justify-content: space-between; align-items: end; gap: 20px; padding: 28px max(24px, 
+calc((100% - 1150px) / 2)); color: #fff; background: #102a43; } 
+.cabecera h1, .cabecera p { margin: 4px 0; } 
+.contenedor { width: min(100% - 32px, 1150px); margin: 28px auto; display: grid; grid-template-columns: 260px 
+1fr; gap: 24px; } 
+.filtros { align-self: start; padding: 20px; border-radius: 14px; background: #fff; box-shadow: 0 10px 28px 
+rgba(16,42,67,.1); } 
+label { display: block; margin: 14px 0 6px; font-weight: 700; } 
+input, select, button { width: 100%; padding: 10px; border: 1px solid #b8c4d2; border-radius: 8px; font: 
+inherit; } 
+button { margin-top: 18px; border: 0; color: #fff; background: #1d4ed8; font-weight: 800; cursor: pointer; } 
+.productos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; } 
+.producto { padding: 20px; border-radius: 14px; background: #fff; box-shadow: 0 10px 28px rgba(16,42,67,.08); } 
+.producto h2 { font-size: 1.1rem; } 
+.categoria { color: #1d4ed8; font-weight: 800; } 
+.precio { font-size: 1.25rem; font-weight: 900; } 
+.sin-resultados { grid-column: 1 / -1; padding: 28px; text-align: center; background: #fff; border-radius: 14px; 
+} 
+ 
+@media (max-width: 900px) { 
+  .productos { grid-template-columns: repeat(2, 1fr); } 
+} 
+@media (max-width: 680px) { 
+  .contenedor { grid-template-columns: 1fr; } 
+  .productos { grid-template-columns: 1fr; } 
+} 

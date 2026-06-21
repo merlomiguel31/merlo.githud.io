@@ -1,0 +1,53 @@
+!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Editor de perfil</title> 
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="app.js" defer></script> 
+</head> 
+<body> 
+  <main class="contenedor"> 
+    <section class="panel controles"> 
+      <p class="etiqueta">Ejercicio 3</p> 
+      <h1>Editor de perfil</h1> 
+ 
+      <label for="nombre">Nombre</label> 
+      <input id="nombre" value="Ana Torres"> 
+ 
+      <label for="profesion">Profesión</label> 
+      <input id="profesion" value="Desarrolladora Front-End"> 
+ 
+      <label for="biografia">Biografía</label> 
+      <textarea id="biografia" rows="4">Me gusta crear interfaces accesibles.</textarea> 
+ 
+      <label for="habilidad">Nueva habilidad</label> 
+      <div class="fila"> 
+        <input id="habilidad" placeholder="Ejemplo: JavaScript"> 
+        <button id="btnAgregar" type="button">Agregar</button> 
+      </div> 
+ 
+      <fieldset> 
+        <legend>Tema de la tarjeta</legend> 
+        <div class="temas"> 
+          <button type="button" class="btnTema" data-tema="azul">Azul</button> 
+          <button type="button" class="btnTema" data-tema="verde">Verde</button> 
+          <button type="button" class="btnTema" data-tema="morado">Morado</button> 
+        </div> 
+      </fieldset> 
+ 
+      <p id="estado" class="estado" aria-live="polite"></p> 
+    </section> 
+ 
+    <article id="tarjetaPerfil" class="perfil tema-azul"> 
+      <div class="avatar" aria-hidden="true">AT</div> 
+      <h2 id="vistaNombre">Ana Torres</h2> 
+      <p id="vistaProfesion" class="profesion">Desarrolladora Front-End</p> 
+      <p id="vistaBiografia">Me gusta crear interfaces accesibles.</p> 
+      <h3>Habilidades</h3> 
+      <ul id="listaHabilidades"></ul> 
+    </article> 
+  </main> 
+</body> 
+</html> 

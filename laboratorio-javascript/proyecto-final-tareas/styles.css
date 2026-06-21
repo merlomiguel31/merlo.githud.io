@@ -1,0 +1,42 @@
+:root { font-family: system-ui, sans-serif; color: #102a43; background: #eef3f8; } 
+* { box-sizing: border-box; } 
+body { margin: 0; } 
+button, input, select { font: inherit; } 
+.cabecera { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 24px 
+max(24px, calc((100% - 1180px) / 2)); color: #fff; background: #102a43; } 
+.cabecera p, .cabecera h1 { margin: 4px 0; } 
+.cabecera button { padding: 10px 14px; border: 1px solid #fff; border-radius: 8px; color: #fff; background: 
+transparent; cursor: pointer; } 
+.contenedor { width: min(100% - 32px, 1180px); margin: 28px auto; display: grid; grid-template-columns: 330px 
+1fr; gap: 24px; } 
+.panel { padding: 22px; border-radius: 15px; background: #fff; box-shadow: 0 12px 30px rgba(16,42,67,.1); } 
+.formulario-panel { align-self: start; } 
+label { display: block; margin: 12px 0 6px; font-weight: 700; } 
+input, select { width: 100%; padding: 10px; border: 1px solid #b8c4d2; border-radius: 8px; } 
+form button { width: 100%; margin-top: 18px; padding: 11px; border: 0; border-radius: 8px; color: #fff; 
+background: #1d4ed8; font-weight: 800; cursor: pointer; } 
+.mensaje { min-height: 24px; color: #15803d; } 
+.estadisticas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; } 
+.estadisticas article { padding: 16px; border-radius: 12px; color: #fff; background: #1d4ed8; text-align: 
+center; } 
+.estadisticas strong { display: block; font-size: 1.6rem; } 
+.barra-filtros { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; } 
+.tabla-contenedor { overflow-x: auto; } 
+able { width: 100%; border-collapse: collapse; } 
+th, td { padding: 12px 10px; border-bottom: 1px solid #d8e1ea; text-align: left; vertical-align: top; } 
+th { color: #fff; background: #102a43; } 
+.acciones { display: flex; gap: 6px; flex-wrap: wrap; } 
+.acciones button { padding: 7px 9px; border: 0; border-radius: 7px; cursor: pointer; } 
+.btnCompletar { color: #fff; background: #15803d; } 
+.btnEliminar { color: #fff; background: #b91c1c; } 
+.etiqueta { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: .82rem; font-weight: 800; 
+background: #eaf2ff; } 
+.sin-tareas { text-align: center; color: #52606d; } 
+ 
+@media (max-width: 900px) { 
+  .contenedor { grid-template-columns: 1fr; } 
+  .estadisticas { grid-template-columns: repeat(2, 1fr); } 
+} 
+@media (max-width: 560px) { 
+  .barra-filtros, .estadisticas { grid-template-columns: 1fr; } 
+}

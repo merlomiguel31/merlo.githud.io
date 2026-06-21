@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Catálogo tecnológico</title> 
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="app.js" defer></script> 
+</head> 
+<body> 
+  <header class="cabecera"> 
+    <div> 
+      <p>Ejercicio 5</p> 
+      <h1>Catálogo tecnológico</h1> 
+    </div> 
+    <p id="resumenCatalogo">0 productos</p> 
+  </header> 
+ 
+  <main class="contenedor"> 
+    <aside class="filtros"> 
+      <label for="busqueda">Buscar</label> 
+      <input id="busqueda" type="search" placeholder="Nombre del producto"> 
+ 
+      <label for="categoria">Categoría</label> 
+      <select id="categoria"> 
+        <option value="todas">Todas</option> 
+        <option value="Laptop">Laptop</option> 
+        <option value="Monitor">Monitor</option> 
+        <option value="Accesorio">Accesorio</option> 
+      </select> 
+ 
+      <label for="precioMaximo">Precio máximo: <span id="valorPrecio">S/ 6000</span></label> 
+      <input id="precioMaximo" type="range" min="100" max="6000" step="100" value="6000"> 
+ 
+      <label for="orden">Ordenar</label> 
+      <select id="orden"> 
+        <option value="nombre">Nombre</option> 
+        <option value="precio-asc">Menor precio</option> 
+        <option value="precio-desc">Mayor precio</option> 
+      </select> 
+ 
+      <button id="btnLimpiar" type="button">Limpiar filtros</button> 
+    </aside> 
+ 
+    <section> 
+      <div id="listaProductos" class="productos"></div> 
+    </section> 
+  </main> 
+</body> 
+</html>

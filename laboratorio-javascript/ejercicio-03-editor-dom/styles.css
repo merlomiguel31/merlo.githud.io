@@ -1,0 +1,44 @@
+root { font-family: system-ui, sans-serif; color: #102a43; background: #f4f7fb; } 
+* { box-sizing: border-box; } 
+body { margin: 0; } 
+ 
+.contenedor { 
+  width: min(100% - 32px, 980px); 
+  min-height: 100vh; 
+  margin-inline: auto; 
+  display: grid; 
+  grid-template-columns: 1.1fr 0.9fr; 
+  gap: 26px; 
+  align-items: center; 
+  padding-block: 32px; 
+} 
+ 
+.panel, .perfil { 
+  padding: 28px; 
+  border-radius: 18px; 
+  background: #fff; 
+  box-shadow: 0 14px 36px rgba(16, 42, 67, 0.12); 
+} 
+ 
+.etiqueta { color: #1d4ed8; font-weight: 800; } 
+label, legend { display: block; margin: 13px 0 6px; font-weight: 700; } 
+input, textarea, button { font: inherit; } 
+input, textarea { width: 100%; padding: 10px; border: 1px solid #b8c4d2; border-radius: 8px; } 
+.fila { display: grid; grid-template-columns: 1fr auto; gap: 8px; } 
+button { padding: 10px 14px; border: 0; border-radius: 8px; color: #fff; background: #1d4ed8; cursor: pointer; } 
+fieldset { margin-top: 18px; border: 1px solid #cbd5e1; border-radius: 10px; } 
+.temas { display: flex; gap: 8px; flex-wrap: wrap; } 
+.estado { min-height: 24px; color: #15803d; } 
+.avatar { width: 76px; height: 76px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-weight: 900; font-size: 1.4rem; } 
+.profesion { font-weight: 700; } 
+.perfil ul { padding-left: 20px; } 
+.tema-azul { border-top: 10px solid #1d4ed8; } 
+.tema-azul .avatar { background: #1d4ed8; } 
+.tema-verde { border-top: 10px solid #15803d; } 
+.tema-verde .avatar { background: #15803d; } 
+.tema-morado { border-top: 10px solid #6d28d9; } 
+.tema-morado .avatar { background: #6d28d9; } 
+ 
+@media (max-width: 760px) { 
+  .contenedor { grid-template-columns: 1fr; } 
+} 

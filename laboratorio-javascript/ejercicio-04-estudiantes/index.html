@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Registro de estudiantes</title> 
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="app.js" defer></script> 
+</head> 
+<body> 
+  <main class="contenedor"> 
+    <section class="panel"> 
+      <p class="etiqueta">Ejercicio 4</p> 
+      <h1>Registro de estudiantes</h1> 
+ 
+      <form id="formEstudiante"> 
+        <label for="nombre">Nombre completo</label> 
+        <input id="nombre" required> 
+ 
+        <label for="correo">Correo</label> 
+        <input id="correo" type="email" required> 
+ 
+        <div class="fila"> 
+          <div> 
+            <label for="nota">Nota final</label> 
+            <input id="nota" type="number" min="0" max="20" step="0.1" required> 
+          </div> 
+          <div> 
+            <label for="turno">Turno</label> 
+            <select id="turno"> 
+              <option value="Mañana">Mañana</option> 
+              <option value="Noche">Noche</option> 
+            </select> 
+          </div> 
+        </div> 
+ 
+        <button type="submit">Registrar estudiante</button> 
+        <p id="mensaje" class="mensaje" aria-live="polite"></p> 
+      </form> 
+    </section> 
+ 
+    <section class="panel listado"> 
+      <div class="barra"> 
+        <h2>Estudiantes</h2> 
+        <div class="filtros" aria-label="Filtros"> 
+          <button type="button" class="btnFiltro activo" data-filtro="todos">Todos</button> 
+          <button type="button" class="btnFiltro" data-filtro="aprobados">Aprobados</button> 
+          <button type="button" class="btnFiltro" data-filtro="desaprobados">Desaprobados</button> 
+        </div> 
+      </div> 
+ 
+      <p id="estadisticas">Sin estudiantes registrados.</p> 
+      <div id="listaEstudiantes" class="tarjetas"></div> 
+    </section> 
+  </main> 
+</body> 
+</html> 

@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Gestor de tareas</title> 
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="app.js" defer></script> 
+</head> 
+<body> 
+  <header class="cabecera"> 
+    <div> 
+      <p>Proyecto integrador</p> 
+      <h1>Gestor de tareas</h1> 
+    </div> 
+    <button id="btnDatosDemo" type="button">Cargar datos de ejemplo</button> 
+  </header> 
+ 
+  <main class="contenedor"> 
+    <section class="panel formulario-panel"> 
+      <h2>Nueva tarea</h2> 
+      <form id="formTarea"> 
+        <label for="titulo">Título</label> 
+        <input id="titulo" maxlength="80" required> 
+ 
+        <label for="responsable">Responsable</label> 
+        <input id="responsable" maxlength="50" required> 
+ 
+        <label for="prioridad">Prioridad</label> 
+        <select id="prioridad"> 
+          <option value="Baja">Baja</option> 
+          <option value="Media" selected>Media</option> 
+          <option value="Alta">Alta</option> 
+        </select> 
+ 
+        <label for="estado">Estado</label> 
+        <select id="estado"> 
+          <option value="Pendiente">Pendiente</option> 
+          <option value="En proceso">En proceso</option> 
+          <option value="Completada">Completada</option> 
+        </select> 
+ 
+        <button type="submit">Agregar tarea</button> 
+        <p id="mensaje" class="mensaje" aria-live="polite"></p> 
+      </form> 
+    </section> 
+   <section class="contenido"> 
+      <section class="estadisticas" aria-label="Estadísticas"> 
+        <article><strong id="totalTareas">0</strong><span>Total</span></article> 
+        <article><strong id="totalPendientes">0</strong><span>Pendientes</span></article> 
+        <article><strong id="totalProceso">0</strong><span>En proceso</span></article> 
+        <article><strong id="totalCompletadas">0</strong><span>Completadas</span></article> 
+      </section> 
+ 
+      <section class="panel"> 
+        <div class="barra-filtros"> 
+          <div> 
+            <label for="filtroResponsable">Responsable</label> 
+            <select id="filtroResponsable"> 
+              <option value="todos">Todos</option> 
+            </select> 
+          </div> 
+          <div> 
+            <label for="filtroEstado">Estado</label> 
+            <select id="filtroEstado"> 
+              <option value="todos">Todos</option> 
+              <option value="Pendiente">Pendiente</option> 
+              <option value="En proceso">En proceso</option> 
+              <option value="Completada">Completada</option> 
+            </select> 
+          </div> 
+        </div> 
+ 
+        <div class="tabla-contenedor"> 
+          <table> 
+            <thead> 
+              <tr> 
+                <th>Tarea</th> 
+                <th>Responsable</th> 
+                <th>Prioridad</th> 
+                <th>Estado</th> 
+                <th>Acciones</th> 
+              </tr> 
+            </thead> 
+            <tbody id="cuerpoTabla"></tbody> 
+          </table> 
+        </div> 
+        <p id="sinTareas" class="sin-tareas">No existen tareas para mostrar.</p> 
+      </section> 
+    </section> 
+  </main> 
+</body> 
+</html> 
